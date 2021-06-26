@@ -1,9 +1,15 @@
 import { Injectable } from '@angular/core';
+import {ClientModel} from "../models/client-model";
+import {UserModel} from "../models/user-model";
+
 @Injectable({
   providedIn: 'root'
 })
+
 export class UserService {
-  private user: any | undefined;
+
+  private user: UserModel | undefined;
+
   constructor() { }
   public setUser(user: any): void {
     this.user = user;

@@ -24,7 +24,7 @@ Contul Meu(My Account)
   -email
   *-istoric oferte *
 
-Modul Autentificare
+Modul Autentificare  OK
   -Login
   -Register
   -Forgot Password
@@ -33,7 +33,7 @@ Modul Administrare
   -lista cu oferte (adugare, editare, stergere)
   -lista cu destinatii (adugare, editare, stergere)
   -lista cu clienti
-  *-lista cu rezervari *
+  ***-lista cu rezervari ***
 
 
 

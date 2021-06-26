@@ -22,20 +22,7 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void { }
 
   onLogin(): void {
-    this.userService.setUser({
-      accountNonExpired: true,
-      accountNonLocked: true,
-      authorities: [],
-      credentialsNonExpired: true,
-      email: "maxim@florin.com",
-      enabled: true,
-      firstName: "maxim",
-      id: 1,
-      lastName: "florin",
-      password: "$2a$10$vbDADkl1oAQoTKuggHTpm.S/47wIoI56FTlp5BZDmCk9Ff.GQq/um",
-      username: "maxim@florin.com",
-      token: "token"
-    })
+
     this.router.navigate(["/", "dashboard"])
     // console.log(this.loginForm.value);
     // this.authService.login(this.loginForm.value).subscribe((response: any) => {

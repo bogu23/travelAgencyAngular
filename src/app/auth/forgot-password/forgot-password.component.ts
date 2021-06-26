@@ -13,7 +13,8 @@ export class ForgotPasswordComponent implements OnInit {
 
   forgotPasswordForm: FormGroup;
 
-  constructor(private formBuilder: FormBuilder, private authService: AuthService, private userService: UserService, private router: Router) {
+  constructor(private formBuilder: FormBuilder, private authService: AuthService,
+              private userService: UserService, private router: Router) {
     this.forgotPasswordForm = formBuilder.group({
       email: ['', Validators.email],
     });
@@ -32,7 +33,7 @@ export class ForgotPasswordComponent implements OnInit {
       } else {
         alert(response.error);
       }
-      
+
     }, (error) => {
       console.log(error);
     }
