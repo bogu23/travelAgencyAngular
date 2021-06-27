@@ -36,6 +36,8 @@ Modul Administrare
   ***-lista cu rezervari ***
 
 
+--behavior subject--
+--Observable--
 
 
 

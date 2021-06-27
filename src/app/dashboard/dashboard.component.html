@@ -1,1 +1,3 @@
-<app-add-edit-delete-offer></app-add-edit-delete-offer>
+<!--<app-add-edit-delete-offer></app-add-edit-delete-offer>-->
+<app-add-edit-delete-client [client]="selectedClient"></app-add-edit-delete-client>
+<app-list-clients (onSelect)="onReceiveClient($event)"></app-list-clients>

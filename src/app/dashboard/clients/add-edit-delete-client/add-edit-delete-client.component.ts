@@ -43,7 +43,7 @@ export class AddEditDeleteClientComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    if (this.client == null) {
+    if (this.client == undefined) {
       this.setupForm();
     } else {
       this.form = this.formBuilder.group({

@@ -6,8 +6,8 @@ import {ClientModel} from "../../models/client-model";
 })
 export class ClientsService {
 
-  clients: Array<ClientModel> = [];
-  id: number = 1;
+  private clients: Array<ClientModel> = [];
+  private id: number = 1;
 
   constructor() {
     for (let i = 0; i < 5; i++) {
