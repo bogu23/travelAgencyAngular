@@ -32,8 +32,6 @@ export class RegisterComponent implements OnInit {
       } else {
         alert(response.error);
       }
-
-      
     })
   }
 }
