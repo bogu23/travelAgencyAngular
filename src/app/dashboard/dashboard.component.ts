@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ClientsService} from "./clients/clients.service";
+import {OffersService} from "./offers/offers.service";
 
 @Component({
   selector: 'app-dashboard',
@@ -9,8 +10,9 @@ import {ClientsService} from "./clients/clients.service";
 export class DashboardComponent implements OnInit {
 
   selectedClient: any = undefined;
+  selectedOffer: any = undefined;
 
-  constructor(private clientsService: ClientsService) { }
+  constructor(private clientsService: ClientsService, private offersService: OffersService) { }
 
   ngOnInit(): void {
   }
@@ -19,5 +21,11 @@ export class DashboardComponent implements OnInit {
     this.selectedClient = this.clientsService.getById(id);
     console.log(this.selectedClient);
   }
+
+  onReceiveOffer(id: number) {
+    this.selectedOffer = this.offersService.getById(id);
+    console.log(this.selectedOffer);
+  }
+
 
 }

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {OfferModel} from "../../../models/offer-model";
 
 @Component({
   selector: 'app-preview-offer',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PreviewOfferComponent implements OnInit {
 
+  @Input() offer: any = undefined;
   constructor() { }
 
   ngOnInit(): void {

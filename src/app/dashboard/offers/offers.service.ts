@@ -16,7 +16,7 @@ export class OffersService {
         description: 'asdfjhsdifjnoanmsdpamsd',
         price: 10*i,
         title: `sejur ${i}`,
-        images: []
+        images: ["https://material.angular.io/assets/img/examples/shiba2.jpg"]
       };
       this.create(offer);
     }

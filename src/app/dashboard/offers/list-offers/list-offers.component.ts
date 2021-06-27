@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {OffersService} from "../offers.service";
+import {OfferModel} from "../../../models/offer-model";
 
 @Component({
   selector: 'app-list-offers',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListOffersComponent implements OnInit {
 
-  constructor() { }
+  @Output() onSelect: EventEmitter<number>;
+  offers: Array<OfferModel> = [];
 
-  ngOnInit(): void {
+  constructor(private offersService: OffersService) {
+    this.onSelect = new EventEmitter<number>();
   }
 
+  ngOnInit(): void {
+    this.offers = this.offersService.get();
+  }
+
+  onSelectOffer(id: number) {
+    this.onSelect.emit(id);
+  }
 }
