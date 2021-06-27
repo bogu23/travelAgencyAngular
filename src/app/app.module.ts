@@ -24,6 +24,9 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { MatCardModule } from "@angular/material/card";
 import { MatButtonModule } from "@angular/material/button";
 import { MyAccountComponent } from './my-account/my-account.component';
+import { AddEditDeleteCountryComponent } from './dashboard/destinations/add-edit-delete-destination/add-edit-delete-country/add-edit-delete-country.component';
+import {MatSelectModule} from "@angular/material/select";
+import {MatOptionModule} from "@angular/material/core";
 
 @NgModule({
   declarations: [
@@ -39,7 +42,8 @@ import { MyAccountComponent } from './my-account/my-account.component';
     AddEditDeleteClientComponent,
     ListClientsComponent,
     PreviewClientComponent,
-    MyAccountComponent
+    MyAccountComponent,
+    AddEditDeleteCountryComponent
   ],
   imports: [
     BrowserModule,
@@ -53,7 +57,9 @@ import { MyAccountComponent } from './my-account/my-account.component';
     FormsModule,
     ReactiveFormsModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    MatSelectModule,
+    MatOptionModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,6 +1,8 @@
 import {Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {DestinationModel} from "../../../models/destination-model";
+import {CountryModel} from "../../../models/country-model";
+import {DestinationsService} from "../destinations.service";
 
 @Component({
   selector: 'app-add-edit-delete-destination',
@@ -12,7 +14,10 @@ export class AddEditDeleteDestinationComponent implements OnInit, OnChanges {
   @Input() destination: DestinationModel;
   form: FormGroup;
 
-  constructor(private formBuilder: FormBuilder) {
+  selectedCountry: CountryModel | undefined;
+  countries: Array<CountryModel> = [];
+
+  constructor(private formBuilder: FormBuilder, private destinationsService: DestinationsService) {
     this.form = formBuilder.group({
       id: [null],
       name: ['', Validators.compose([Validators.required, Validators.minLength(3)])],
@@ -27,6 +32,7 @@ export class AddEditDeleteDestinationComponent implements OnInit, OnChanges {
 
   ngOnInit(): void {
     this.setupForm();
+    this.countries = this.destinationsService.getCountries();
   }
 
   private setupForm(): void {
